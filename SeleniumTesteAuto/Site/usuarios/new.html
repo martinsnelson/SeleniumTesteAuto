@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function salvar()
+        {
+            var nome =  document.getElementsByName("usuario.nome")[0].value;
+            var email = document.getElementsByName("usuario.email")[0].value;
+
+            //console.log(nome+ " " +email);
+            //location.replace("http://localhost:8080/usuarios/lista.html");
+            //window.location.href("http://localhost:8080/usuarios/lista.html");
+            alert("Salvo com sucesso! Nome: " + nome + " e email: " + email);
+        }
+    </script>
+
+    <h1>Novo Usuario</h1>
+    <!-- value="Nelson" value="nelsontecti@gmail.com" -->
+    <form action="/usuarios/lista.html" method="GET">
+        <label>Nome</label>
+        <input type="text" name="usuario.nome" > 
+        <br>
+        <label>E-mail</label>
+        <input type="text" name="usuario.email" >
+        <br>
+        <button type="submit" id="btnSalvar" onclick="salvar()" >Salvar</button>
+    </form>
+    
+</body>
+</html>
